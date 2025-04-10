@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://pannellum.org/js/pannellum.js"></script>
+  <link rel="stylesheet" href="https://pannellum.org/css/pannellum.css">
+  <title>Virtual Tour</title>
+</head>
+<body>
+  <div id="panorama" style="width: 100%; height: 500px;"></div>
+  <script>
+    pannellum.viewer('panorama', {
+      "default": {
+        "firstScene": "room1",
+        "sceneFadeDuration": 1000
+      },
+      "scenes": {
+        "room1": {
+          "panorama": "room1.jpg",
+          "hotSpots": [
+            {
+              "pitch": 0,
+              "yaw": 90,
+              "type": "scene",
+              "text": "Go to Room 2",
+              "sceneId": "room2"
+            }
+          ]
+        },
+        "room2": {
+          "panorama": "room2.jpg",
+          "hotSpots": [
+            {
+              "pitch": 0,
+              "yaw": -90,
+              "type": "scene",
+              "text": "Back to Room 1",
+              "sceneId": "room1"
+            }
+          ]
+        }
+      }
+    });
+  </script>
+</body>
+</html>
