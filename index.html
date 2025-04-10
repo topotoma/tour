@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual Tour</title>
+    <link rel="stylesheet" href="https://pannellum.org/css/pannellum.css">
+    <script src="https://pannellum.org/js/pannellum.js"></script>
+  </head>
+  <body style="margin:0">
+    <div id="panorama" style="width: 100vw; height: 100vh;"></div>
+
+    <script>
+      pannellum.viewer('panorama', {
+        "type": "equirectangular",
+        "panorama": "room1.jpg",  // change this to your image file name
+        "autoLoad": true
+      });
+    </script>
+  </body>
+</html>
